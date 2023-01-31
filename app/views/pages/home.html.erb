@@ -1,8 +1,22 @@
-<h1>Home</h1>
-<p>Now is <%= Time.now %></p>
+<!DOCTYPE html>
 
-<%= link_to "Home", root_path %>
-<%= link_to "About", about_path %>
-<%= link_to "Accomodations", accomodations_path %>
-<%= link_to "Activities", activities_path %>
-<%= link_to "Our contact info", contact_path %>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="refresh" content="30">
+      <meta name="description" content="Telo Baptism Page">
+      <meta name="author" content="Paryssa Khazaie">
+      <title>Home Page</title>
+  </head>
+  <body>
+    <header>
+      <h1>Home</h1>
+    </header>
+    <p>Now is <%= Time.now %></p>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About", about_path %>
+    <%= link_to "Accomodations", accomodations_path %>
+    <%= link_to "Activities", activities_path %>
+    <%= link_to "Our contact info", contact_path %>
+  </body>
+</html>

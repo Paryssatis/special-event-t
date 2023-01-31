@@ -1,8 +1,24 @@
-<h1>Contact</h1>
-<ol>
-  <% @hosts.each do |host| %>
-    <li><%= host.capitalize %></li>
-  <% end %>
-</ol>
+<!DOCTYPE html>
 
-<%= link_to "Home", root_path %>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="refresh" content="30">
+      <meta name="description" content="Telo Baptism Page">
+      <meta name="author" content="Paryssa Khazaie">
+      <title>Contact</title>
+  </head>
+  <body>
+      <h1>Contact</h1>
+    <ol>
+      <% @hosts.each do |host| %>
+        <li><%= host.capitalize %></li>
+      <% end %>
+    </ol>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About", about_path %>
+    <%= link_to "Accomodations", accomodations_path %>
+    <%= link_to "Activities", activities_path %>
+    <%= link_to "Our contact info", contact_path %>
+  </body>
+</html>
