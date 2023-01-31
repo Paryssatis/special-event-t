@@ -9,14 +9,24 @@
       <title>Home Page</title>
   </head>
   <body>
+    <p class="navbar-text float-right">
+      <% if guest_signed_in? %>
+        Logged in as <strong><%= current_guest.email %></strong>.
+        <%= link_to 'Edit profile', edit_guest_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_guest_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+        <%= link_to "Sign up", new_guest_registration_path, :class => 'navbar-link'  %> |
+        <%= link_to "Login", new_guest_session_path, :class => 'navbar-link'  %>
+      <% end %>
+    </p>
     <header>
       <h1>Home</h1>
+      <%= link_to "Home", root_path %>
+      <%= link_to "About", about_path %>
+      <%= link_to "Accomodations", accomodations_path %>
+      <%= link_to "Activities", activities_path %>
+      <%= link_to "Our contact info", contact_path %>
     </header>
     <p>Now is <%= Time.now %></p>
-    <%= link_to "Home", root_path %>
-    <%= link_to "About", about_path %>
-    <%= link_to "Accomodations", accomodations_path %>
-    <%= link_to "Activities", activities_path %>
-    <%= link_to "Our contact info", contact_path %>
   </body>
 </html>
