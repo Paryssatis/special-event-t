@@ -5,6 +5,12 @@ class PagesController < ApplicationController
   def about
   end
 
+  def accomodations
+  end
+
+  def activities
+  end
+
   def contact
     @hosts = ["Artemis", "Ricky"]
   end
